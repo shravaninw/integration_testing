@@ -34,7 +34,7 @@ void main() {
       // Trigger a frame.
       await tester.pumpAndSettle();
 
-      // Verify the counter increments by 1.
+      // Verify the counter increments by 2.
       expect(find.text('2'), findsOneWidget);
       final Finder fab3 = find.byTooltip('Increment');
 
@@ -44,7 +44,7 @@ void main() {
       // Trigger a frame.
       await tester.pumpAndSettle();
 
-      // Verify the counter increments by 1.
+      // Verify the counter increments by 3.
       expect(find.text('3'), findsOneWidget);
       final Finder fab4 = find.byTooltip('Increment');
 
@@ -54,7 +54,7 @@ void main() {
       // Trigger a frame.
       await tester.pumpAndSettle();
 
-      // Verify the counter increments by 1.
+      // Verify the counter increments by 4.
       expect(find.text('4'), findsOneWidget);
       final Finder fab5 = find.byTooltip('Increment');
 
@@ -64,7 +64,7 @@ void main() {
       // Trigger a frame.
       await tester.pumpAndSettle();
 
-      // Verify the counter increments by 1.
+      // Verify the counter increments by 5.
       expect(find.text('5'), findsOneWidget);
     });
   });
