@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:integrationtesting/list_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -34,9 +35,26 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    GlobalKey key = GlobalKey();
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          TextButton(
+              key: key,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ListPage(),
+                  ),
+                );
+              },
+              child: Text(
+                'Next',
+                style: TextStyle(color: Colors.white),
+              ))
+        ],
       ),
       body: Center(
         child: Column(
